@@ -30,3 +30,8 @@ jobs:
         pytest quantecon/random/tests 
         pytest quantecon/tests
         pytest quantecon/util/tests
+      
+    - name: Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
