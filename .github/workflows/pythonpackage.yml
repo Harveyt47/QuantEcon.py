@@ -24,6 +24,7 @@ jobs:
     
     - name: Run Tests
       run: |
+        coveralls
         flake8 --select F401, F405,E231 quantecon
         pytest quantecon/game_theory/tests 
         pytest quantecon/markov/tests 
@@ -31,4 +32,3 @@ jobs:
         pytest quantecon/random/tests 
         pytest quantecon/tests
         pytest quantecon/util/tests
-        coveralls
