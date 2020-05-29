@@ -21,10 +21,6 @@ jobs:
         python setup.py develop
         pip install -U pip nose coverage numpy scipy pandas numba sympy ipython statsmodels flake8 
         python setup.py install
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Run Tests
       run: |
@@ -35,8 +31,4 @@ jobs:
         pytest quantecon/random/tests 
         pytest quantecon/tests
         pytest quantecon/util/tests
-      
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        coveralls
