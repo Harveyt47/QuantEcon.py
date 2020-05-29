@@ -1,0 +1,6 @@
+        pytest quantecon/game_theory/tests 
+        pytest quantecon/markov/tests 
+        pytest quantecon/optimize/tests 
+        pytest quantecon/random/tests 
+        pytest quantecon/tests
+        pytest quantecon/util/tests
