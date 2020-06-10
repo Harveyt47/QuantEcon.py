@@ -25,7 +25,6 @@ jobs:
      
     - name: Run Tests
       run: |
-        coverage run --source=quantecon -m pytest quantecon/
         coverage run --source=quantecon -m pytest quantecon/game_theory/tests 
         coverage run --source=quantecon -m pytest quantecon/markov/tests 
         coverage run --source=quantecon -m pytest quantecon/optimize/tests 
